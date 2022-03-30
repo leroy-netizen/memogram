@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Container, AppBar, Typography, Grow, Grid } from "@material-ui/core";
-import memogram from "./assets/Logo/logo-normal.jpeg";
+import world from "./assets/Images/world.png";
 import { useDispatch } from "react-redux";
 
 import { getPosts } from "./actions/posts.actions";
@@ -21,12 +21,7 @@ const App = () => {
         <Typography className={classes.heading} variant="h2" align="center">
           Memolee
         </Typography>
-        <img
-          className={classes.image}
-          src={memogram}
-          alt="memories"
-          height="60"
-        />
+        <img className={classes.image} src={world} alt="memories" height="60" />
       </AppBar>
       <Grow in>
         <Container>
