@@ -18,10 +18,9 @@ mongoose
   .catch((error) => {
     console.log(error.message);
   });
+app.use(express.json({ limit: "40mb", extended: "true" }));
+app.use(express.urlencoded({ limit: "20mb", extended: "true" }));
 
 // localhost:5000/posts
 app.use(cors());
 app.use("/posts", postsRoutes);
-
-app.use(express.json({ limit: "40mb", extended: "true" }));
-app.use(express.urlencoded({ limit: "20mb", extended: "true" }));
