@@ -21,3 +21,16 @@ export const createPost = async (req, res) => {
     res.status(409).json({ message: error.message });
   }
 };
+
+export const updatePost = async (req, res) => {
+  const { id: _id } = req.params;
+  const post = req.body;
+
+  if (monggose.Types.Objectid.isValid(_id))
+    return res.status(404).send("No post with such Id");
+
+  const updatedPost = await PostMessage.findByIdAndUpdate(_id, post, {
+    new: true,
+  });
+  res.json(updatedPost);
+};
