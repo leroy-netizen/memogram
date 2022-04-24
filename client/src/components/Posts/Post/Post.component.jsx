@@ -49,7 +49,12 @@ const Post = ({ post, setCurrentId }) => {
         </Typography>
       </div>
       <CardContent>
-        <Typography className={classes.title} variant="h5" color="gutterBottom">
+        <Typography
+          className={classes.title}
+          variant="body2"
+          color="textSecondary"
+          component="p"
+        >
           {post.message}
         </Typography>
       </CardContent>
