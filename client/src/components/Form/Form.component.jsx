@@ -105,7 +105,7 @@ const Form = ({ currentId, setCurrentId }) => {
             onDone={({ base64 }) =>
               setPostData({ ...postData, selectedFile: base64 })
             }
-          />{" "}
+          />
         </div>
 
         <Button
